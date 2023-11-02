@@ -1,0 +1,100 @@
+.navbar {
+    position: fixed !important;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    text-transform: capitalize;
+    position: relative;
+    //@at-root
+    .mobile-menu-icon {
+        position: absolute;
+        visibility: hidden;
+    }
+    .logo {
+        text-decoration: none;
+        color: #ffbd39;
+        font-size: 25px;
+        margin-left: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        width: 80%;
+        @media screen and (max-width: 750px) {
+            margin-right: 100px !important;
+        }
+        //
+        li {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            text-transform: capitalize;
+            color: #e6e6e6;
+            letter-spacing: 1px;
+            //
+            &:hover {
+                color: #ffbd39;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* mobile viewport */
+
+@media screen and (max-width: 750px) {
+    .logo {
+        margin-right: 350px;
+        position: fixed;
+    }
+    .mobile-menu-icon {
+        visibility: visible !important;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        border: none;
+        top: 15px;
+        right: 25px;
+    }
+    .nav-links {
+        visibility: hidden;
+    }
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #1a1a1a;
+        padding: 40px 0;
+        right: 0;
+        top: 60px;
+        height: 100vh;
+        width: 50%;
+        border-radius: 15px;
+        cursor: pointer;
+        //
+        li {
+            padding: 20px 20px;
+            text-transform: capitalize;
+            color: #e6e6e6;
+            text-align: center;
+            &:hover {
+                color: #ffbd39;
+                text-decoration: underline;
+            }
+            .link {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}

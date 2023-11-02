@@ -1,0 +1,10 @@
+.skills {
+    background-color: #000000;
+    //@at-root
+    p {
+        @apply mt-2;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,64 @@
+.about {
+  background-color: black;
+  //@at-root
+  img {
+    border: 2px solid #999999;
+    border-radius: 30px;
+  }
+  p {
+    color: #999999;
+  }
+  button {
+    border: 2px solid #ffbd39;
+    padding: 15px;
+    border-radius: 11px;
+    margin: 20px 0;
+    &:hover {
+      background-color: #ffbd39;
+      color: #000;
+    }
+  }
+}
+
+.image-container {
+  position: relative;
+}
+
+.image {
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image.loading {
+  opacity: 0;
+}
+
+.shimmer {
+  position: absolute;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-color: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1s ease-out forwards infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
